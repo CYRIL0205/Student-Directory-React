@@ -1,0 +1,114 @@
+/* Universal Styles */
+*{
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/*Header style */
+header{
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: skyblue;
+
+}
+
+header > h1{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+/* Form Style*/
+#formcontainer{
+  padding: 10px 20px;
+  margin: 20px;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  background-color: skyblue;
+  
+}
+
+#formcontainer > #studentForm >.input-fields > label{
+  font-weight: bold;
+}
+
+#formcontainer > #studentForm >.input-fields{
+  display:flex;
+  flex-direction: column;
+  
+}
+
+#formcontainer > #studentForm >.input-fields > input{
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+#formcontainer > #studentForm :last-child > button{
+  background-color: lightgray;
+  padding:5px;
+  margin: 5px;
+  cursor: pointer;
+  flex-grow:1;
+  font-weight: bolder;
+  font-size: small;
+  border-radius: 10px;
+}
+
+#formcontainer > #studentForm :last-child{
+  display: flex;
+  justify-content: center;
+}
+
+#studentlist > .list-item{
+  background-color: skyblue;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  
+}
+
+#studentlist > .list-item > button{
+  background-color: red;
+  color: whitesmoke;
+  padding:10px;
+  border: 0px;
+  border-radius: 10px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* for list container*/
+#studentlist{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 5px;
+}
+
+#studentlist >.list-item > h2{
+  font-weight: bold;
+}
+
+/* responsive design */
+/* Mobile*/ 
+@media (width <= 600px){
+  #studentlist > .list-item{
+    grid-column: span 12;
+  }
+}
+
+@media (width > 600px) and (width <= 1000px) {
+  #studentlist > .list-item{
+    grid-column: span 4;
+  }
+}
+
+@media (width >= 1000px) {
+  #studentlist > .list-item{
+    grid-column: span 2;
+  }
+}
