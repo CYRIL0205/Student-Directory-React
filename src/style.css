@@ -64,7 +64,7 @@ header > h1{
   justify-content: center;
 }
 
-#studentlist > .list-item{
+#listContainer > .list-item{
   background-color: skyblue;
   margin: 10px;
   padding: 10px 20px;
@@ -72,7 +72,7 @@ header > h1{
   
 }
 
-#studentlist > .list-item > button{
+#listContainer > .list-item > button{
   background-color: red;
   color: whitesmoke;
   padding:10px;
@@ -83,32 +83,32 @@ header > h1{
 }
 
 /* for list container*/
-#studentlist{
+#listContainer{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 5px;
 }
 
-#studentlist >.list-item > h2{
+#listContainer >.list-item > h2{
   font-weight: bold;
 }
 
 /* responsive design */
 /* Mobile*/ 
 @media (width <= 600px){
-  #studentlist > .list-item{
+  #listContainer > .list-item{
     grid-column: span 12;
   }
 }
 
 @media (width > 600px) and (width <= 1000px) {
-  #studentlist > .list-item{
+  #listContainer > .list-item{
     grid-column: span 4;
   }
 }
 
 @media (width >= 1000px) {
-  #studentlist > .list-item{
+  #listContainer > .list-item{
     grid-column: span 2;
   }
 }
